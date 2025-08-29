@@ -13,5 +13,10 @@ export default defineConfig({
         emptyOutDir: true,
         sourcemap: true
     },
-    plugins: [glsl()]
+    plugins: [glsl()],
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname, './sources')
+        }
+    }
 })
